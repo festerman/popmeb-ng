@@ -3,3 +3,41 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  // wrapper
+  #wrapper
+
+    // dataset info
+    #datasetInfo
+    h2 Dataset Info
+    p
+      strong Name:
+      | <span id='datasetname'></span>
+      br
+      strong Description:
+      | <span id='description'></span>
+    // /dataset info
+
+    // dataset listing
+    #datasetList
+      table
+        thead
+          th DatasetName
+          th Description
+          th Delete?
+        tbody
+    // /datasetlist
+
+    // add dataset
+    h2 Add dataset
+    #addDataset
+      fieldset
+      strong Name:
+      input#inputName(type='text', placeholder='Dataset name')
+      br
+      strong Description:
+      input#inputDescription(type='text', placeholder='Dataset description')
+      br
+      button#btnAddDataset Add dataset
+    // /add dataset
+  // /wrapper
